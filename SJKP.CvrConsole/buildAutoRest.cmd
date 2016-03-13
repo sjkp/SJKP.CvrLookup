@@ -1,0 +1,1 @@
+..\packages\autorest.0.15.0\tools\autorest.exe -Namespace SJKP.CvrClient -Input swagger.json

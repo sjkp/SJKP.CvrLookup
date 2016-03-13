@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SJKP.CvrLookup.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -7,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace SJKP.CvrLookup.Controllers
 {
@@ -31,6 +33,7 @@ namespace SJKP.CvrLookup.Controllers
         }
 
         [HttpPost]
+        [ResponseType(typeof(CvrResult))]
         public async Task<IHttpActionResult> Search(SearchQuery postbody)
         {
             var handler = new HttpClientHandler();
